@@ -1,5 +1,8 @@
-# NERC 2024-2025
-Welcome to our ICPC programming competition repository! This repository is structured to help us collaborate efficiently as a team while keeping our work organized. Below are guidelines on how to use this repository.
+# Internet ICPC 2024 (Tehran Site)
+Hello and welcome to the 2024 internet ICPC West Asia (Tehran Site), where our university's icpc team ([Hakim Sabzevari University](https://en.hsu.ac.ir/)) will be selected for the main competition (at Sharif University of Technology).
+
+**For ease of coding, try using the [template](./rahmat/template.cpp) file in addition to the following.**
+
 
 ## Repository Structure
 Each team member has their own unique folder to work on their solutions or experiments. The repository follows this structure:
@@ -18,7 +21,7 @@ Each person should only work in their assigned folder to avoid **conflicts**.
 ## Initial Setup
 1. Clone the repository:
     ```bash
-    git clone https://github.com/ctrl-alt-Defeat-icpc/NERC2024.git
+    git clone https://github.com/ctrl-alt-Defeat-icpc/iicpc2024
     ```
 2. you should write your solutions in your own folder!
 3. Ensure the .gitignore file is in place to keep unnecessary files out of the repository.
