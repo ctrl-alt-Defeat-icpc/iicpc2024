@@ -13,7 +13,7 @@ bool compare2(const pair<int, int>& a, const pair<int, int>& b) {
 
 bool compare1(const pair<int, int>& a, const pair<int, int>& b) {
     if(a.first != b.first) return a.first > b.first;
-    return compare2(a, b);
+    return a.second < b.second;
 }
 
 void Main() {
