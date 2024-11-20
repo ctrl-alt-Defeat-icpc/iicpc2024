@@ -19,7 +19,7 @@ void Main() {
         else {
             if(dcur < cur)
                 diag += server[dcur++];
-            if(dcur >= n && dcur_neg < cur)
+            if(dcur <= n && dcur_neg < dcur)
                 diag -= server[dcur_neg++];
             
             ans += diag;
