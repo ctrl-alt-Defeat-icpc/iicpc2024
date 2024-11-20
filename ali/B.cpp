@@ -12,6 +12,10 @@ void Main()
     cin >> a >> b >> c >> d;
     if (a == c || a == d || b == c || b == d)
         cout << 3;
+    else if ((a < c && a > d) || (b < c && b > d))
+        cout << 3;
+    else if ((a > c && a < d) || (b > c && b < d))
+        cout << 3;
     else
         cout << 4;
 }
