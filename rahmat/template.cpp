@@ -4,8 +4,8 @@ using namespace std;
 #define ll long long
 const int N = 1e5 + 5;
 
-void Main()
-{   
+void Main() {
+    
 }
 
 int main()
