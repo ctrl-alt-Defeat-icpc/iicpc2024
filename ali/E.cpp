@@ -39,16 +39,27 @@ void Main()
     // }
     while (net.size() > 1)
     {
-        for (int i = net.size() - 1; i >= 0; i--)
+        while (1)
         {
-            if (net[i] == -1)
+            bool flag = true;
+            for (int i = net.size() - 3; i >= 0; i--)
             {
-                net[i] = (net[i + 1] + net[i + 2]);
-                net.erase(net.begin() + i + 1);
-                net.erase(net.begin() + i + 1);
-                break;
+                if (net[i] == -1)
+                    if (net[i + 1] > -1 && net[i + 2] > -1)
+                    {
+                        flag = false;
+                        net[i] = (net[i + 1] + net[i + 2]);
+                        net.erase(net.begin() + i + 1);
+                        net.erase(net.begin() + i + 1);
+                        break;
+                    }
             }
-            else if (net[i] == -2)
+            if (flag)
+                break;
+        }
+        for (int i = net.size() - 3; i >= 0; i--)
+        {
+            if (net[i] == -2)
             {
                 net[i] = max(net[i + 1], net[i + 2]);
                 net.erase(net.begin() + i + 1);
