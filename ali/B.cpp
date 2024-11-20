@@ -10,14 +10,17 @@ void Main()
     cin >> n;
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    if (a == c || a == d || b == c || b == d)
-        cout << 3;
-    else if ((a < c && a > d) || (b < c && b > d))
-        cout << 3;
-    else if ((a > c && a < d) || (b > c && b < d))
-        cout << 3;
-    else
+    if (c > d)
+        swap(c, d);
+    if (a > b)
+        swap(a, b);
+
+    if (c < a && d > a && d < b)
         cout << 4;
+    else if (c > a && c < b && d > b)
+        cout << 4;
+    else
+        cout << 3;
 }
 
 int main()
