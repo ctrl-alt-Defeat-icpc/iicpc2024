@@ -1,3 +1,15 @@
+<div align="center">
+    
+#### solved problems
+| problem | code |
+|:---:|:---:|
+| A | [link](./ali/A.cpp) |
+| B | [link](./ali/B.cpp) |
+| C | [link](./rahmat/c.cpp) |
+| F | [link](./ali/f.cpp) |
+</div>
+
+
 # Internet ICPC 2024 (Tehran Site)
 Hello and welcome to the 2024 internet ICPC West Asia (Tehran Site), where our university's icpc team ([Hakim Sabzevari University](https://en.hsu.ac.ir/)) will be selected for the main competition (at Sharif University of Technology).
 
