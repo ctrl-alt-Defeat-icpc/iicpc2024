@@ -31,7 +31,9 @@ void Main() {
 
             first_added_sync++;
             last_added_sync++;
+
             ans += sync_value;
+            // cout << "sync: " << ans << ' ' << sync_value << " =>" << "l:" << sync_left << " r:" << sync_right << " " << first_added_sync << " " << last_added_sync << '\n';
 
             if(first_added_sync == n - 1) {
                 first_added_sync = n - 1 - diff.front();
