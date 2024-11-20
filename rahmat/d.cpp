@@ -3,9 +3,11 @@ using namespace std;
 
 #define ull unsigned long long
 const int N = 1e6 + 5;
-int n, q, cur, dcur, dcur_neg;
+int n, q, ser1size; // server 1 size
+int sync_left, sync_right, sync_depth, first_added_sync, last_added_sync;
+queue<int> diff;
 string choice;
-ull server[N], ans, value, diag;
+ull server[N], ans, value, sync_value;
 
 void Main() {
     cin >> n >> q;
@@ -13,16 +15,30 @@ void Main() {
         cin >> choice;
         if(choice[0] == 'a') {
             cin >> value;
-            server[cur++] = value;
+            server[ser1size++] = value;
             ans += value;
         }
         else {
-            if(dcur < cur)
-                diag += server[dcur++];
-            if(dcur <= n && dcur_neg < dcur)
-                diag -= server[dcur_neg++];
-            
-            ans += diag;
+            if(sync_right < ser1size) { // an element added to sync
+                sync_value += server[sync_right++];
+                if(first_added_sync != -1) { // sync is not empty
+                    diff.push(last_added_sync);
+                    last_added_sync = 0;
+                }
+                else
+                    first_added_sync = last_added_sync = 0;
+            }
+
+            first_added_sync++;
+            last_added_sync++;
+            ans += sync_value;
+
+            if(first_added_sync == n - 1) {
+                first_added_sync = n - 1 - diff.front();
+                diff.pop();
+                if(sync_left < sync_right)
+                    sync_value -= server[sync_left++];
+            }
         }
         cout << ans << '\n';
     }
